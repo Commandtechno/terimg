@@ -13,7 +13,13 @@ const defaultHeight = consoleHeight - 2;
 
 module.exports = function (
   path,
-  { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight, divider = defaultDivider } = {
+  {
+    pixel = defaultPixel,
+    blank = defaultBlank,
+    width = defaultWidth,
+    height = defaultHeight,
+    divider = defaultDivider
+  } = {
     pixel: defaultPixel,
     blank: defaultBlank,
     width: defaultWidth,
@@ -41,7 +47,13 @@ module.exports = function (
 module.exports.attach = function () {
   console.image = function (
     path,
-    { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight, divider = defaultDivider } = {
+    {
+      pixel = defaultPixel,
+      blank = defaultBlank,
+      width = defaultWidth,
+      height = defaultHeight,
+      divider = defaultDivider
+    } = {
       pixel: defaultPixel,
       blank: defaultBlank,
       width: defaultWidth,
@@ -57,4 +69,4 @@ module.exports.defaultPixel = defaultPixel;
 module.exports.defaultBlank = defaultBlank;
 module.exports.defaultWidth = defaultWidth;
 module.exports.defaultHeight = defaultHeight;
-module.exports.defaultDivider = defaultDivider
+module.exports.defaultDivider = defaultDivider;
