@@ -57,6 +57,6 @@ Options
   height: 25, // Maximum height in columns (Default's to terminal's full height)
   pixel: "B", // Change character it uses as a pixel (Default's to ▄▄ "\u2584\u2584")
   blank: " ", // Change character it uses as transparency (Default's to 2 spaces "  "),
-  divider: "\n" // Change line divider (Try "​\n" if you are having issues)
+  divider: "\n" // Change line divider (Try "​\n" if you are having issues, it uses a zero-width character behind the \)
 }
 ```
