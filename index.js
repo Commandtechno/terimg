@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const jimp = require("jimp");
 
+const defaultDivider = "\n";
 const defaultPixel = "\u2584".repeat(2);
 const defaultBlank = " ".repeat(2);
 
@@ -12,11 +13,12 @@ const defaultHeight = consoleHeight - 2;
 
 module.exports = function (
   path,
-  { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight } = {
+  { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight, divider = defaultDivider } = {
     pixel: defaultPixel,
     blank: defaultBlank,
     width: defaultWidth,
-    height: defaultHeight
+    height: defaultHeight,
+    divider: defaultDivider
   }
 ) {
   return jimp.read(path).then((image) => {
@@ -29,7 +31,7 @@ module.exports = function (
         res += a === 0 ? chalk.reset(blank) : chalk.rgb(r, g, b).bgRgb(r, g, b)(pixel);
       }
 
-      res += "ㅤ\n";
+      res += "\n";
     }
 
     return res;
@@ -39,14 +41,15 @@ module.exports = function (
 module.exports.attach = function () {
   console.image = function (
     path,
-    { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight } = {
+    { pixel = defaultPixel, blank = defaultBlank, width = defaultWidth, height = defaultHeight, divider = defaultDivider } = {
       pixel: defaultPixel,
       blank: defaultBlank,
       width: defaultWidth,
-      height: defaultHeight
+      height: defaultHeight,
+      divider: defaultDivider
     }
   ) {
-    return module.exports(path, { pixel, blank, width, height }).then(console.log);
+    return module.exports(path, { pixel, blank, width, height, divider }).then(console.log);
   };
 };
 
@@ -54,3 +57,4 @@ module.exports.defaultPixel = defaultPixel;
 module.exports.defaultBlank = defaultBlank;
 module.exports.defaultWidth = defaultWidth;
 module.exports.defaultHeight = defaultHeight;
+module.exports.defaultDivider = defaultDivider
