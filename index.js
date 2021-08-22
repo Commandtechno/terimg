@@ -37,7 +37,7 @@ module.exports = function (
         res += a === 0 ? chalk.reset(blank) : chalk.rgb(r, g, b).bgRgb(r, g, b)(pixel);
       }
 
-      res += "\n";
+      res += divider;
     }
 
     return res;
