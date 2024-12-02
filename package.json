@@ -1,10 +1,13 @@
 {
+  "bin": {
+    "terimg": "cli.js"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "jimp": "^0.16.1"
   },
   "name": "terimg",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "keywords": [
     "console",

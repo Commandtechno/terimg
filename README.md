@@ -1,4 +1,4 @@
-![Banner](https://cdn.discordapp.com/attachments/791493944751423540/876726126079258624/banner.png)
+![Banner](banner.png)
 
 # Terimg
 
@@ -26,14 +26,10 @@ Ways to print an image to the terminal
 
 ```js
 terimg("./banner.png").then(console.log);
-terimg(
-  "https://cdn.discordapp.com/attachments/791493944751423540/876726126079258624/banner.png"
-).then(console.log);
+terimg("https://cdn.discordapp.com/attachments/791493944751423540/876726126079258624/banner.png").then(console.log);
 
 terimg.attach();
-console.image(
-  "https://cdn.discordapp.com/attachments/791493944751423540/876726126079258624/banner.png"
-);
+console.image("https://cdn.discordapp.com/attachments/791493944751423540/876726126079258624/banner.png");
 ```
 
 Inputs
